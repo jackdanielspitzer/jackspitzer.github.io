@@ -1,0 +1,55 @@
+/* General reset */
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
+body {
+  font-family: 'Helvetica', sans-serif;
+  background: linear-gradient(to bottom, #d0ff59, #a8f3aa);
+  padding: 2rem;
+  color: #000;
+}
+
+/* Navbar */
+nav {
+  display: flex;
+  justify-content: center;
+  gap: 3rem;
+  font-weight: bold;
+  font-size: 1.5rem;
+  margin-bottom: 2rem;
+}
+
+/* Profile Photo */
+.profile-photo {
+  display: flex;
+  justify-content: center;
+  margin-bottom: 1.5rem;
+}
+.profile-photo img {
+  border-radius: 50%;
+  width: 150px;
+  height: 150px;
+}
+
+/* Intro Section */
+.intro {
+  max-width: 700px;
+  margin: auto;
+  font-size: 1.1rem;
+  line-height: 1.7;
+}
+
+.intro h1 {
+  font-size: 2rem;
+  margin-bottom: 1rem;
+}
+.intro ul {
+  margin-top: 1rem;
+  padding-left: 1.5rem;
+}
+.intro ul li {
+  margin-bottom: 0.5rem;
+}
