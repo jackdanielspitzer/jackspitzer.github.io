@@ -5,18 +5,98 @@
   <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
   <title>Projects</title>
   <link rel="stylesheet" href="styles.css" />
+  <style>
+    html, body {
+      margin: 0;
+      padding: 0;
+      height: 100%;
+    }
+
+    .page-wrapper {
+      display: flex;
+      flex-direction: column;
+      min-height: 100vh;
+    }
+
+    main {
+      flex: 1;
+    }
+
+    .site-footer {
+      text-align: center;
+      padding: 2rem 1rem 1rem;
+      color: #333;
+      background-color: transparent;
+    }
+
+    .footer-contact-links {
+      display: flex;
+      flex-direction: column;
+      align-items: center;
+      gap: 0.5rem;
+      margin-top: 1rem;
+    }
+
+    .footer-contact-links a {
+      display: flex;
+      align-items: center;
+      gap: 0.5rem;
+      color: inherit;
+      text-decoration: none;
+    }
+
+    .footer-contact-links img {
+      width: 20px;
+      height: 20px;
+    }
+  </style>
 </head>
 <body>
-  <nav>
-    <a href="index.html">Home</a>
-    <a href="projects.html">Projects</a>
-    <a href="updates.html">Updates</a>
-    <a href="contact.html">Contact</a>
-  </nav>
+  <div class="page-wrapper">
+    <nav>
+      <a href="index.html">Home</a>
+      <a href="projects.html">Projects</a>
+      <a href="updates.html">Updates</a>
+      <a href="contact.html">Contact</a>
+    </nav>
 
-  <main>
-    <h1>Projects</h1>
-    <p>This is the Projects page. You can describe or link to all the cool things you're building here.</p>
-  </main>
+    <main>
+      <section class="projects-section">
+        <h2>Latest Projects</h2>
+        <a href="https://github.com/jackdanielspitzer/WaterPoloStats" class="project-card" target="_blank" rel="noopener noreferrer">
+          <div class="left-half">
+            <img src="thingy.png" alt="Project Screenshot" class="project-image" />
+          </div>
+          <div class="right-half">
+            <h3>Water Polo Stats Application</h3>
+            <p>Water Polo voice tracking statistics application using machine learning and GPT API. Includes schedules, rosters, and game logs (with timestamps). Framework is applicable to other sports.</p>
+          </div>
+        </a>
+      </section>
+    </main>
+
+    <footer class="site-footer">
+      <h3>Contact Info</h3>
+      <p>If you want to get in touch with me about something or just to say hi, reach out on social media or send me an email. I'm always open to meeting new people and interesting conversations.</p>
+      <div class="footer-contact-links">
+        <a href="https://x.com/JackDSpitzer" target="_blank" rel="noopener noreferrer" aria-label="X">
+          <img src="x-image.png" alt="X logo" />
+          @JackDSpitzer
+        </a>
+        <a href="https://github.com/jackdanielspitzer" target="_blank" rel="noopener noreferrer" aria-label="GitHub">
+          <img src="github-black.png" alt="GitHub logo" />
+          jackdanielspitzer
+        </a>
+        <a href="mailto:jackdanielspitzer@gmail.com" aria-label="Email">
+          <img src="email.png" alt="Email icon" />
+          jackdanielspitzer@gmail.com
+        </a>
+      </div>
+      <p class="footer-copyright">
+        <br><br>
+        ©2025 Jack Spitzer
+      </p>
+    </footer>
+  </div>
 </body>
 </html>
