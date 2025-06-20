@@ -590,26 +590,29 @@ body {
 
 
 
-  .content-wrapper {
-  display: flex;
-  flex-direction: column;
-  align-items: center;
-  padding: 10px;
-  margin-left: 0;   /* remove large left margin on mobile */
+ .content-wrapper {
+  margin-left: 0 !important;    /* remove desktop left margin */
+  padding-left: 10px;           /* small padding to keep some space from screen edge */
+  padding-right: 10px;          /* keep padding on right side too */
+  box-sizing: border-box;
+}
+
+.profile-photo {
+  margin-left: 0 !important;    /* remove any negative or large left margin */
+  position: static !important;  /* undo relative/left shifting */
+  left: auto !important;
+  width: 150px;                 /* optional: control size */
+  height: 150px;                /* match width for square */
 }
 
 .intro {
-  padding: 10px;
-  text-align: left;  /* better readability on narrow screens */
-  margin-top: 20px;
-  max-width: 600px;  /* constrain width for better line length */
+  position: static !important;  /* undo relative/left shifting */
+  left: auto !important;
+  margin-left: 0 !important;    /* remove left margin */
+  padding-left: 0 !important;   /* no extra left padding */
+  max-width: 100% !important;   /* use full available width */
+  text-align: left;             /* keep text left aligned */
 }
-
-
-  .profile-photo img {
-    width: 100%;
-    max-width: 150px;
-  }
 
   
 
