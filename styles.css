@@ -616,11 +616,11 @@ body {
 
 .profile-photo {
   margin-left: 0 !important;
+  margin-bottom: 0.5rem !important;
   position: static !important;
-  width: 200px !important;
-  height: 200px !important;
+  width: 150px !important;
+  height: 150px !important;
   border-radius: 50% !important;
-  margin-bottom: 1rem !important;  /* space below photo */
 }
 
 .intro {
