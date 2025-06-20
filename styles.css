@@ -662,6 +662,24 @@ body {
   .footer-contact-links img {
     margin-right: 8px;
   }
+  .contact-section {
+  margin-left: 0 !important;
+  padding: 20px 15px !important;  /* add comfy padding all around */
+  width: 100% !important;
+  box-sizing: border-box;
+  background: transparent !important;  /* or your desired background */
+}
+
+.contact-section h2,
+.contact-section p,
+.contact-description,
+.contact-list {
+  margin-left: 0 !important;
+  padding-left: 0 !important;
+  max-width: 100% !important;
+  text-align: left;
+  overflow-wrap: break-word; /* prevent long words from breaking layout */
+}
 }
 
 
