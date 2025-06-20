@@ -563,6 +563,14 @@ body {
     font-size: 16px;
     padding: 10px;
   }
+  html, body {
+  height: 100% !important;      /* full viewport height */
+  margin: 0 !important;
+  padding: 0 !important;
+  overflow-x: hidden !important; /* no horizontal scroll */
+  background: linear-gradient(to bottom, #d0ff59, #a8f3aa) !important; /* your gradient */
+}
+
 
  nav {
   display: flex;
