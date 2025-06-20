@@ -617,8 +617,8 @@ body {
 .profile-photo {
   margin-left: 0 !important;
   position: static !important;
-  width: 300px !important;
-  height: 300px !important;
+  width: 200px !important;
+  height: 200px !important;
   border-radius: 50% !important;
   margin-bottom: 1rem !important;  /* space below photo */
 }
