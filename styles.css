@@ -460,6 +460,18 @@ body {
   text-align: left;
 }
 
+/* Adjust description paragraph font size if needed */
+.contact-section p {
+  font-size: 1rem;  /* adjust smaller or larger */
+  max-width: 600px; /* constrain width */
+  margin-left: 25vw; /* align with heading */
+}
+.contact-section p.description {
+  font-size: 1.25rem;  /* larger font size */
+  max-width: 600px;
+  margin-left: 25vw;   /* align with heading */
+}
+
 
 .contact-description {
   max-width: 600px;          /* control paragraph width */
