@@ -616,16 +616,17 @@ body {
 
 .profile-photo {
   margin-left: 0 !important;
-  margin-bottom: 0.1rem !important;
   position: static !important;
   width: 150px !important;
   height: 150px !important;
   border-radius: 50% !important;
+  margin-bottom: 0rem !important;   /* remove space below the photo */
+  margin-top: -10px !important;
 }
 
 .intro {
   margin-left: 0 !important;
-  margin-top: 0 !important; 
+  margin-top: -5px !important;
   position: static !important;
   padding-left: 0 !important;
   max-width: 100% !important;
