@@ -590,19 +590,34 @@ body {
 
 
 
- .content-wrapper {
-  margin-left: 100vw !important; /* shift right by 25% of viewport width */
-  padding-left: 0 !important;
+  .content-wrapper {
+  margin-left: 0 !important;   /* remove desktop margin */
+  padding-left: 10vw !important;  /* add left padding of 10% viewport width */
   padding-right: 10px !important;
+  width: 100% !important;      /* full width */
   box-sizing: border-box;
+  display: flex !important;
+  flex-direction: column !important; /* stack vertically */
+  align-items: flex-start !important; /* align content to left with padding */
 }
 
-
-.profile-photo, .intro {
-  position: static !important;
-  left: auto !important;
+.profile-photo {
   margin-left: 0 !important;
+  position: static !important;
+  width: 150px !important;
+  height: 150px !important;
+  border-radius: 50% !important;
+  margin-bottom: 1rem !important;  /* space below photo */
 }
+
+.intro {
+  margin-left: 0 !important;
+  position: static !important;
+  padding-left: 0 !important;
+  max-width: 100% !important;
+  text-align: left !important;
+}
+
 
 
   
