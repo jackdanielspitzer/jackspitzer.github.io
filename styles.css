@@ -591,28 +591,19 @@ body {
 
 
  .content-wrapper {
-  margin-left: 0 !important;    /* remove desktop left margin */
-  padding-left: 10px;           /* small padding to keep some space from screen edge */
-  padding-right: 10px;          /* keep padding on right side too */
+  margin-left: 25vw !important; /* shift right by 25% of viewport width */
+  padding-left: 0 !important;
+  padding-right: 10px !important;
   box-sizing: border-box;
 }
 
-.profile-photo {
-  margin-left: 0 !important;    /* remove any negative or large left margin */
-  position: static !important;  /* undo relative/left shifting */
+
+.profile-photo, .intro {
+  position: static !important;
   left: auto !important;
-  width: 150px;                 /* optional: control size */
-  height: 150px;                /* match width for square */
+  margin-left: 0 !important;
 }
 
-.intro {
-  position: static !important;  /* undo relative/left shifting */
-  left: auto !important;
-  margin-left: 0 !important;    /* remove left margin */
-  padding-left: 0 !important;   /* no extra left padding */
-  max-width: 100% !important;   /* use full available width */
-  text-align: left;             /* keep text left aligned */
-}
 
   
 
