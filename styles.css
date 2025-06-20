@@ -591,7 +591,7 @@ body {
 
 
  .content-wrapper {
-  margin-left: 25vw !important; /* shift right by 25% of viewport width */
+  margin-left: 100vw !important; /* shift right by 25% of viewport width */
   padding-left: 0 !important;
   padding-right: 10px !important;
   box-sizing: border-box;
