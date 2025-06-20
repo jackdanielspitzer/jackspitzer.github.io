@@ -625,6 +625,7 @@ body {
 
 .intro {
   margin-left: 0 !important;
+  margin-top: 0 !important; 
   position: static !important;
   padding-left: 0 !important;
   max-width: 100% !important;
