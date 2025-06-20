@@ -445,32 +445,24 @@ body {
   width: 100%;
 }
 .contact-section {
-  margin-top: 100px;  /* reduce this to move it up */
-  display: flex;
-  flex-direction: column;
-  align-items: flex-start;
-  gap: 1rem;
+  margin-left: 0 !important;
+  padding: 20px 15px !important;  /* add comfy padding all around */
+  width: 100% !important;
+  box-sizing: border-box;
+  background: transparent !important;  /* or your desired background */
 }
 
-.contact-section h2 {
-  font-size: 3rem;   /* same size as Latest X Posts */
-  font-weight: bold;
-  margin-left: 25vw; /* same left position as Latest X Posts */
-  margin-bottom: 1rem;
+.contact-section h2,
+.contact-section p,
+.contact-description,
+.contact-list {
+  margin-left: 0 !important;
+  padding-left: 0 !important;
+  max-width: 100% !important;
   text-align: left;
+  overflow-wrap: break-word; /* prevent long words from breaking layout */
 }
 
-/* Adjust description paragraph font size if needed */
-.contact-section p {
-  font-size: 1rem;  /* adjust smaller or larger */
-  max-width: 600px; /* constrain width */
-  margin-left: 25vw; /* align with heading */
-}
-.contact-section p.description {
-  font-size: 1.25rem;  /* larger font size */
-  max-width: 600px;
-  margin-left: 25vw;   /* align with heading */
-}
 
 
 
