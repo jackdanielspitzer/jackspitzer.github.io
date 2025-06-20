@@ -572,30 +572,46 @@ body {
     padding: 10px;
   }
 
-  nav {
-    display: flex;
-    flex-direction: column;
-    align-items: center;
-    gap: 10px;
-    padding: 10px 0;
-  }
+ nav {
+  display: flex;
+  flex-direction: row;      /* keep links in a row */
+  justify-content: center;  /* center the nav items */
+  flex-wrap: wrap;          /* allow wrapping if needed */
+  gap: 15px;                /* space between links */
+  padding: 10px 0;
+  font-size: 1.5rem;        /* slightly smaller font on mobile */
+}
+  nav a {
+  flex: 0 1 auto;          /* allow links to size naturally */
+  width: auto;             /* don't force fixed width */
+  padding: 8px 12px;
+  text-align: center;
+}
+
+
 
   .content-wrapper {
-    display: flex;
-    flex-direction: column;
-    align-items: center;
-    padding: 10px;
-  }
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  padding: 10px;
+  margin-left: 0;   /* remove large left margin on mobile */
+}
+
+.intro {
+  padding: 10px;
+  text-align: left;  /* better readability on narrow screens */
+  margin-top: 20px;
+  max-width: 600px;  /* constrain width for better line length */
+}
+
 
   .profile-photo img {
     width: 100%;
     max-width: 150px;
   }
 
-  .intro {
-    padding: 10px;
-    text-align: center;
-  }
+  
 
   .intro ul {
     padding-left: 20px;
