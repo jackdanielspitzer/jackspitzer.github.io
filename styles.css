@@ -338,12 +338,10 @@ body {
   border: 3px solid #000;
 }
 .research-section {
-  display: flex;
-  flex-direction: column;
-  align-items: center;
-  margin: 4rem auto;
-  width: 90%;
-  max-width: 900px;
+  width: 70%;
+  margin: 0 auto 4rem auto;
+  margin-left: 25%;
+  text-align: left;
 }
 
 .research-section h2 {
