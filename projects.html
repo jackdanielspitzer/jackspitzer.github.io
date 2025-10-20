@@ -5,6 +5,51 @@
   <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
   <title>Projects/Research</title>
   <link rel="stylesheet" href="styles.css" />
+  <style>
+    html, body {
+      margin: 0;
+      padding: 0;
+      height: 100%;
+    }
+
+    .page-wrapper {
+      display: flex;
+      flex-direction: column;
+      min-height: 100vh;
+    }
+
+    main {
+      flex: 1;
+    }
+
+    .site-footer {
+      text-align: center;
+      padding: 2rem 1rem 1rem;
+      color: #333;
+      background-color: transparent;
+    }
+
+    .footer-contact-links {
+      display: flex;
+      flex-direction: column;
+      align-items: center;
+      gap: 0.5rem;
+      margin-top: 1rem;
+    }
+
+    .footer-contact-links a {
+      display: flex;
+      align-items: center;
+      gap: 0.5rem;
+      color: inherit;
+      text-decoration: none;
+    }
+
+    .footer-contact-links img {
+      width: 20px;
+      height: 20px;
+    }
+  </style>
 </head>
 <body>
   <div class="page-wrapper">
@@ -16,27 +61,34 @@
     </nav>
 
     <main>
-      <!-- Projects Section -->
       <section class="projects-section">
         <h2>Latest Projects</h2>
 
-        <div class="project-item">
-          <h3>Water Polo Stats Application</h3>
-          <p><strong>Link:</strong> <a href="https://github.com/jackdanielspitzer/WaterPoloStats" target="_blank" rel="noopener noreferrer">GitHub Repository</a></p>
-          <p>Voice-enabled statistics tracking application using machine learning and GPT API. Includes 20+ stats, schedules, rosters, and game logs (with timestamps). Framework is applicable to other sports. Contact for inquiries.</p>
-        </div>
+        <a href="https://github.com/jackdanielspitzer/WaterPoloStats" class="project-card" target="_blank" rel="noopener noreferrer">
+          <div class="left-half">
+            <img src="thingy.png" alt="Project Screenshot" class="project-image" />
+          </div>
+          <div class="right-half">
+            <h3>Water Polo Stats Application</h3>
+            <p>Water Polo voice enabled statistics tracking application using machine learning and GPT API. Includes 20+ stats, schedules, rosters, and game logs (with timestamps). Framework is applicable to other sports. Contact for inquiries.</p>
+          </div>
+        </a>
 
-        <div class="project-item">
-          <h3>Scraper Module</h3>
-          <p><strong>Link:</strong> <a href="https://github.com/jackdanielspitzer/ScraperModule" target="_blank" rel="noopener noreferrer">GitHub Repository</a></p>
-          <p>Modular Python pipeline to scrape, process, and analyze LinkedIn, Reddit, and X posts and comments. Features custom scoring system, AI summarization (GPT-4o/local), cloud storage, and alert notifications for businesses. Contact White Lotus for use.</p>
-        </div>
+        <a href="https://github.com/jackdanielspitzer/ScraperModule" class="project-card" target="_blank" rel="noopener noreferrer">
+          <div class="left-half">
+            <img src="Scrapper.png" alt="LinkedIn Scraper Screenshot" class="project-image" />
+          </div>
+          <div class="right-half">
+            <h3>Scraper Module</h3>
+            <p>Modular Python pipeline to scrape, process, and analyze LinkedIn, Reddit, and X posts and comments. Features custom scoring system, AI summarization (GPT-4o/local), cloud storage, and alert notifications for businesses. Contact White Lotus for use.</p>
+          </div>
+        </a>
       </section>
 
-      <!-- Research Section -->
       <section class="research-section">
         <h2>Research</h2>
 
+        <!-- Curieux Academic Journal -->
         <div class="research-item">
           <h3>Curieux Academic Journal – November 2025, Issue 56, Part 2</h3>
           <p><strong>Paper Title:</strong> <em>Unlocking Transparency: The Role of Non “Black Box” Machine Learning Models in Medicine</em></p>
@@ -45,6 +97,7 @@
           <p><strong>Summary:</strong> Discusses the importance of interpretability in AI-driven diagnostics and treatment recommendations, advocating for transparency in medical ML models.</p>
         </div>
 
+        <!-- ACS Western Regional Meeting -->
         <div class="research-item">
           <h3>American Chemical Society Western Regional Meeting – October 25–28, 2025</h3>
           <p><strong>Presentation Title:</strong> <em>Exploring Acetaldehyde Photodissociation Pathways using Interpretable AI Models</em></p>
@@ -55,6 +108,7 @@
           <p><strong>Summary:</strong> Explores the photodissociation pathways of acetaldehyde using interpretable AI models, presented at the ACS Western Regional Meeting.</p>
         </div>
 
+        <!-- Manuscript in Progress -->
         <div class="research-item">
           <h3>Manuscript in Progress – Exploring Acetaldehyde Photodissociation</h3>
           <p><strong>Authors:</strong> Kim, J.H., Dang, H., Joshi, H., Vyas, D.H., Wong, A., Sridharan, S., Spitzer, J.D., Andreasyan, D., Bojeh, E., Grazioli, G.</p>
@@ -64,25 +118,24 @@
       </section>
     </main>
 
-    <!-- Footer -->
     <footer class="site-footer">
       <h3>Contact Info</h3>
       <p>If you want to get in touch with me about something or just to say hi, reach out on social media or send me an email. I'm always open to meeting new people and interesting conversations.</p>
       <div class="footer-contact-links">
         <a href="https://x.com/JackDSpitzer" target="_blank" rel="noopener noreferrer" aria-label="X">
-          <img src="x-image.png" alt="X logo" />
-          @JackDSpitzer
+          <img src="x-image.png" alt="X logo" /> @JackDSpitzer
         </a>
         <a href="https://github.com/jackdanielspitzer" target="_blank" rel="noopener noreferrer" aria-label="GitHub">
-          <img src="github-black.png" alt="GitHub logo" />
-          jackdanielspitzer
+          <img src="github-black.png" alt="GitHub logo" /> jackdanielspitzer
         </a>
         <a href="mailto:jackdanielspitzer@gmail.com" aria-label="Email">
-          <img src="email.png" alt="Email icon" />
-          jackdanielspitzer@gmail.com
+          <img src="email.png" alt="Email icon" /> jackdanielspitzer@gmail.com
         </a>
       </div>
-      <p>©2025 Jack Spitzer</p>
+      <p class="footer-copyright">
+        <br><br>
+        ©2025 Jack Spitzer
+      </p>
     </footer>
   </div>
 </body>
