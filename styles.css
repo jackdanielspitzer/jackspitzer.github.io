@@ -378,19 +378,26 @@ main {
   margin-bottom: 30px;
   align-items: center;
 }
-.research-section {
-  display: flex;
-  flex-direction: column; /* stack research items vertically */
-  align-items: center;    /* center research items horizontally */
-  gap: 30px;              /* space between research items */
+/* Center the Research title */
+.research-section h2 {
+  text-align: center;
+  margin-bottom: 30px;
 }
 
+/* Research cards */
 .research-item {
-  max-width: 860px;       /* restrict width like project cards */
-  width: 100%;
-  margin: 0 auto;         /* center block within research-section */
-  padding: 15px 20px;     /* optional spacing inside each research card */
-  box-sizing: border-box; /* include padding in width */
+  border: 1px solid #ccc;      /* light gray border */
+  border-radius: 12px;         /* rounded corners */
+  padding: 20px;
+  margin-bottom: 30px;
+  box-shadow: 0 4px 8px rgba(0,0,0,0.1); /* subtle shadow */
+  background-color: #fff;      /* white background */
+  transition: transform 0.2s ease, box-shadow 0.2s ease;
+}
+
+.research-item:hover {
+  transform: translateY(-3px);
+  box-shadow: 0 8px 16px rgba(0,0,0,0.15);
 }
 
 
