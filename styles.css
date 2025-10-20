@@ -318,16 +318,6 @@ body {
   margin-bottom: 2rem;
   font-weight: bold;
 }
-.project-card {
-  display: flex;
-  background: white;
-  border-radius: 10px;
-  box-shadow: 0 2px 8px rgba(0,0,0,0.1);
-  width: 700px;
-  height: 130px;      /* shorter height */
-  margin: 2rem auto;
-  overflow: hidden;
-}
 
 .project-image {
   width: 100%;
@@ -378,27 +368,52 @@ main {
   margin-bottom: 30px;
   align-items: center;
 }
-/* Center the Research title */
+/* Research section title */
 .research-section h2 {
   text-align: center;
-  margin-bottom: 30px;
+  margin-bottom: 40px;
 }
 
-/* Research cards */
+/* Research cards container */
 .research-item {
-  border: 1px solid #ccc;      /* light gray border */
-  border-radius: 12px;         /* rounded corners */
-  padding: 20px;
+  display: flex;
+  flex-direction: row;        /* horizontal layout */
+  gap: 20px;
+  border: 1px solid #ccc;
+  border-radius: 12px;
+  padding: 30px;
   margin-bottom: 30px;
-  box-shadow: 0 4px 8px rgba(0,0,0,0.1); /* subtle shadow */
-  background-color: #fff;      /* white background */
+  box-shadow: 0 4px 12px rgba(0,0,0,0.1);
+  background-color: #fff;
+  max-width: 1000px;         /* wider cards */
+  width: 90%;                /* responsive width */
   transition: transform 0.2s ease, box-shadow 0.2s ease;
+  margin-left: auto;
+  margin-right: auto;         /* center horizontally */
 }
 
 .research-item:hover {
   transform: translateY(-3px);
-  box-shadow: 0 8px 16px rgba(0,0,0,0.15);
+  box-shadow: 0 8px 20px rgba(0,0,0,0.15);
 }
+
+/* Left and right halves of research card */
+.research-left, .research-right {
+  flex: 1;
+}
+
+.research-left {
+  /* Optional placeholder for images, charts, etc. */
+}
+
+.research-right h3 {
+  margin-top: 0;
+}
+
+.research-right p {
+  margin: 8px 0;
+}
+
 
 
 .left-half, .right-half {
