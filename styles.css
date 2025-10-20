@@ -659,32 +659,6 @@ body {
   text-decoration: underline;
 }
 
-/* Research */
-.research-section {
-  max-width: 900px;      /* limits how wide the section gets */
-  margin: 50px auto;     /* top/bottom spacing + horizontal centering */
-  padding: 0 20px; 
-}
-
-.research-item {
-  margin-bottom: 30px;
-  line-height: 1.6;
-}
-
-.research-item h3 {
-  font-size: 1.3em;
-  margin-bottom: 5px;
-}
-
-.research-item a {
-  color: #0077cc;
-  text-decoration: none;
-}
-
-.research-item a:hover {
-  text-decoration: underline;
-}
-
 
 
   
