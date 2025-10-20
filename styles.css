@@ -363,6 +363,21 @@ main {
   margin-bottom: 30px;
   align-items: center;
 }
+.research-section {
+  display: flex;
+  flex-direction: column; /* stack research items vertically */
+  align-items: center;    /* center research items horizontally */
+  gap: 30px;              /* space between research items */
+}
+
+.research-item {
+  max-width: 860px;       /* restrict width like project cards */
+  width: 100%;
+  margin: 0 auto;         /* center block within research-section */
+  padding: 15px 20px;     /* optional spacing inside each research card */
+  box-sizing: border-box; /* include padding in width */
+}
+
 
 .left-half, .right-half {
   flex: 1;
