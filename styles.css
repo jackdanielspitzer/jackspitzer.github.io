@@ -344,11 +344,24 @@ main {
 }
 
 .research-section {
-  max-width: 800px;
-  width: 100%;
-  padding: 2rem;
-  box-sizing: border-box;
+  width: 70%;
+  margin: 0 auto 4rem auto;
+  margin-left: 25%;
+  text-align: left;
 }
+
+
+.research-item {
+  display: inline-block;
+  text-align: left;
+  max-width: 700px;
+  margin: 2rem auto;
+  padding: 1rem 1.5rem;
+  border: 1px solid #ddd;
+  border-radius: 8px;
+  background-color: #fafafa;
+}
+
 
 .research-item {
   background: #f9f9f9;
