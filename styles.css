@@ -355,6 +355,21 @@ main {
   text-align: center;
   margin-bottom: 30px;
 }
+.projects-section h2, .research-section h2 {
+  width: 30vw;         /* about 30% of viewport width */
+  max-width: 300px;    /* optional max width for readability */
+  margin: 0 auto 30px; /* center horizontally with bottom margin */
+  text-align: center;
+}
+
+.research-item p, 
+.research-item h3 {
+  width: 30vw;         /* constrain width to 30% viewport width */
+  max-width: 300px;
+  margin: 0 auto 15px; /* center and spacing */
+  text-align: center;
+}
+
 
 .project-card {
   display: flex;
