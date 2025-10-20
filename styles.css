@@ -661,12 +661,12 @@ body {
 
 /* Research */
 .research-section {
-  margin: 50px 0;
-  padding-left: 20px;
+  max-width: 900px;      /* limits how wide the section gets */
+  margin: 50px auto;     /* top/bottom spacing + horizontal centering */
+  padding: 0 20px; 
 }
 
 .research-item {
-  margin-left: 20px;
   margin-bottom: 30px;
   line-height: 1.6;
 }
