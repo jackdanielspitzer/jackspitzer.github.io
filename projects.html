@@ -64,6 +64,81 @@
   margin: 6px 0;
   line-height: 1.5;
 }
+    /* Main container */
+main {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  gap: 60px;
+  padding: 40px 20px;
+}
+
+/* Projects Section */
+.projects-section {
+  width: 100%;
+  max-width: 1000px;       /* constrain section width */
+  margin: 0 auto;
+  display: flex;
+  flex-direction: column;
+  gap: 30px;                /* space between cards */
+  align-items: center;      /* center cards */
+}
+
+/* Projects Section Title */
+.projects-section h2 {
+  text-align: center;
+  font-size: 2.5rem;
+  font-weight: bold;
+  margin-bottom: 40px;
+}
+
+/* Project cards */
+.project-card {
+  display: flex;
+  flex-direction: row;
+  gap: 20px;
+  width: 90%;               /* responsive card width */
+  max-width: 900px;         /* constrain card size */
+  padding: 25px;
+  border: 1px solid #ccc;
+  border-radius: 12px;
+  background-color: #fff;
+  box-shadow: 0 4px 12px rgba(0,0,0,0.1);
+  text-decoration: none;    /* remove underline from <a> */
+  transition: transform 0.2s ease, box-shadow 0.2s ease;
+  margin: 0 auto;           /* center card */
+  align-items: center;
+}
+
+/* Hover effect */
+.project-card:hover {
+  transform: translateY(-3px);
+  box-shadow: 0 8px 20px rgba(0,0,0,0.15);
+}
+
+/* Left and Right halves */
+.left-half, .right-half {
+  flex: 1;                   /* equal width halves */
+}
+
+/* Images inside project cards */
+.project-image {
+  width: 100%;
+  max-width: 300px;          /* constrain image size */
+  height: auto;
+  object-fit: cover;
+}
+
+/* Project text */
+.right-half h3 {
+  margin-top: 0;
+}
+
+.right-half p {
+  margin: 6px 0;
+  line-height: 1.5;
+}
+
 
 </style>
 </head>
