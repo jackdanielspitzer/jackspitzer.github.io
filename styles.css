@@ -274,24 +274,26 @@ body {
   line-height: 1.6;
 }
 
-}
-.project-card {
+.projects-section {
+  width: 100%;
+  max-width: 1000px;       /* same as research for consistency */
+  margin: 0 auto;           /* center section */
   display: flex;
-  align-items: center;
-  gap: 1.5rem;
-  text-decoration: none;
-  color: inherit;
-  border: 1px solid #ddd;
-  padding: 1rem;
-  border-radius: 12px;
-  transition: box-shadow 0.3s ease;
-  max-width: 700px;
-  margin-bottom: 2rem;
+  flex-direction: column;   /* stack cards vertically */
+  align-items: center;      /* center each project card horizontally */
+  gap: 30px;                /* space between cards */
 }
 
-.project-card:hover {
-  box-shadow: 0 8px 24px rgba(0,0,0,0.15);
+.project-card {
+  display: flex;
+  flex-direction: row;
+  gap: 20px;
+  width: 90%;               /* make card slightly smaller than container */
+  max-width: 900px;         /* constrain width for readability */
+  align-items: center;
+  text-decoration: none;    /* remove link underline */
 }
+
 
 .project-image {
   width: 180px;
