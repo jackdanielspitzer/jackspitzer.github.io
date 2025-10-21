@@ -7,75 +7,60 @@
   <link rel="stylesheet" href="styles.css" />
   <style>
   /* Main container */
-main {
-  display: flex;
-  flex-direction: column; /* stack sections vertically */
-  align-items: center;    /* center horizontally */
-  gap: 60px;
-  padding: 40px 20px;
-}
-
-/* Projects Section */
-.projects-section {
+.research-section {
   width: 100%;
-  max-width: 1000px; /* constrain width for readability */
+  max-width: 1000px;   /* match projects width */
   margin: 0 auto;
   display: flex;
   flex-direction: column;
-  gap: 30px;          /* space between cards */
-  align-items: center; /* center cards */
+  gap: 30px;           /* space between cards */
+  align-items: center; /* center cards horizontally */
 }
 
-.projects-section h2 {
-  display: block;           /* ensure block-level */
-  text-align: center;       /* center text */
+.research-section h2 {
+  text-align: center;
   font-size: 2.5rem;
   font-weight: bold;
-  margin: 0 auto 40px;      /* center block and spacing below */
+  margin-bottom: 40px;
 }
-    
 
-/* Project cards */
-.project-card {
+/* Research cards */
+.research-item {
   display: flex;
   flex-direction: row; /* horizontal layout */
   gap: 20px;
   width: 90%;
   max-width: 900px;
-  align-items: center;
-  text-decoration: none; /* remove underline from <a> */
   padding: 25px;
   border: 1px solid #ccc;
   border-radius: 12px;
   background-color: #fff;
   box-shadow: 0 4px 12px rgba(0,0,0,0.1);
   transition: transform 0.2s ease, box-shadow 0.2s ease;
-  margin: 0 auto; /* center the card */
+  margin: 0 auto;      /* center card */
 }
 
-.project-card:hover {
+.research-item:hover {
   transform: translateY(-3px);
   box-shadow: 0 8px 20px rgba(0,0,0,0.15);
 }
 
-/* Left and Right halves of project card */
-.left-half, .right-half {
+/* Left & Right halves */
+.research-left, .research-right {
   flex: 1;
 }
 
-/* Project images */
-.project-image {
+.research-left img {
   width: 100%;
   height: auto;
   object-fit: cover;
 }
 
-/* Optional: spacing for text */
-.right-half h3 {
+.research-right h3 {
   margin-top: 0;
 }
 
-.right-half p {
+.research-right p {
   margin: 6px 0;
   line-height: 1.5;
 }
