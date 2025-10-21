@@ -6,27 +6,15 @@
   <title>Contact</title>
   <link rel="stylesheet" href="styles.css" />
   <style>
-    body {
-      margin: 0;
-      font-family: 'Inter', Arial, sans-serif;
-      color: #000;
-      background-color: #fafafa;
-    }
-
-
-    main {
-      display: flex;
-      flex-direction: column;
-      align-items: flex-start;
-      padding: 80px 10vw;
-    }
-
+    /* Only style the contact section — navbar untouched */
     .contact-section {
+      margin-top: 120px; /* pushes below navbar */
       display: flex;
       flex-direction: column;
       align-items: flex-start;
       gap: 1.5rem;
       max-width: 700px;
+      margin-left: 10vw; /* start from same spot as project text */
     }
 
     .contact-section h2 {
@@ -40,6 +28,7 @@
       line-height: 1.7;
       color: #222;
       margin: 0;
+      max-width: 600px;
     }
 
     .contact-list {
@@ -75,7 +64,7 @@
     }
 
     footer {
-      margin-top: 4rem;
+      margin-top: 3rem;
       color: #666;
       font-size: 0.9rem;
       font-weight: 500;
@@ -84,6 +73,7 @@
 </head>
 
 <body>
+  <!-- navbar identical to other pages -->
   <nav>
     <a href="index.html">Home</a>
     <a href="projects.html">Projects/Research</a>
@@ -95,7 +85,7 @@
     <section class="contact-section">
       <h2>Contact Info</h2>
       <p class="description">
-        If you want to get in touch with me about something or just to say hi, reach out on social media or send me an email. <br>
+        If you want to get in touch with me about something or just to say hi, reach out on social media or send me an email. 
         I'm always open to meeting new people and interesting conversations.
       </p>
 
