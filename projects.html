@@ -6,234 +6,184 @@
   <title>Projects/Research</title>
   <link rel="stylesheet" href="styles.css" />
   <style>
-  /* Main container */
-.research-section {
-  width: 100%;
-  max-width: 1000px;   /* match projects width */
-  margin: 0 auto;
-  display: flex;
-  flex-direction: column;
-  gap: 30px;           /* space between cards */
-  align-items: center; /* center cards horizontally */
-}
+    /* -------------------------
+       Cleaned & focused CSS
+       Place this at the top of projects.html
+       ------------------------- */
 
-.research-section h2 {
-  text-align: center;
-  font-size: 2.5rem;
-  font-weight: bold;
-  margin-bottom: 40px;
-}
+    /* page basics */
+    :root {
+      --card-max-width: 900px;
+      --page-max-width: 1000px;
+      --left-col-percent: 40%; /* change this to 35%/45% if you want different ratio */
+      --card-radius: 12px;
+      --card-padding: 0; /* images fill left, text column gets padding */
+    }
 
-/* Research cards */
-.research-item {
-  display: flex;
-  flex-direction: row; /* horizontal layout */
-  gap: 20px;
-  width: 90%;
-  max-width: 900px;
-  padding: 25px;
-  border: 1px solid #ccc;
-  border-radius: 12px;
-  background-color: #fff;
-  box-shadow: 0 4px 12px rgba(0,0,0,0.1);
-  transition: transform 0.2s ease, box-shadow 0.2s ease;
-  margin: 0 auto;      /* center card */
-}
+    html, body {
+      margin: 0;
+      padding: 0;
+      box-sizing: border-box;
+      font-family: Helvetica, Arial, sans-serif;
+      color: #000;
+    }
 
-.research-item:hover {
-  transform: translateY(-3px);
-  box-shadow: 0 8px 20px rgba(0,0,0,0.15);
-}
+    .page-wrapper {
+      min-height: 100vh;
+      display: flex;
+      flex-direction: column;
+    }
 
-/* Left & Right halves */
-.research-left, .research-right {
-  flex: 1;
-}
+    nav {
+      /* keep your existing nav look — adjust only if needed in styles.css */
+      display: flex;
+      justify-content: center;
+      gap: 1.5rem;
+      padding: 1rem 0;
+    }
 
-.research-left img {
-  width: 100%;
-  height: auto;
-  object-fit: cover;
-}
+    nav a {
+      text-decoration: none;
+      color: inherit;
+      font-weight: 700;
+    }
 
-.research-right h3 {
-  margin-top: 0;
-}
+    main {
+      display: flex;
+      flex-direction: column;
+      align-items: center;
+      gap: 60px;
+      padding: 40px 20px;
+    }
 
-.research-right p {
-  margin: 6px 0;
-  line-height: 1.5;
-}
-    /* Main container */
-main {
-  display: flex;
-  flex-direction: column;
-  align-items: center;
-  gap: 60px;
-  padding: 40px 20px;
-}
+    /* Sections container */
+    .projects-section, .research-section {
+      width: 100%;
+      max-width: var(--page-max-width);
+      margin: 0 auto;
+      display: flex;
+      flex-direction: column;
+      gap: 30px;
+      align-items: center;
+    }
 
-/* Projects Section */
-.projects-section {
-  width: 100%;
-  max-width: 1000px;       /* constrain section width */
-  margin: 0 auto;
-  display: flex;
-  flex-direction: column;
-  gap: 30px;                /* space between cards */
-  align-items: center;      /* center cards */
-}
+    .projects-section h2, .research-section h2 {
+      text-align: center;
+      font-size: 2.5rem;
+      font-weight: 800;
+      margin: 0 0 10px 0;
+    }
 
-/* Projects Section Title */
-.projects-section h2 {
-  text-align: center;
-  font-size: 2.5rem;
-  font-weight: bold;
-  margin-bottom: 40px;
-}
+    /* ====== CARD BASE ====== */
+    .project-card, .research-item {
+      width: 90%;
+      max-width: var(--card-max-width);
+      border-radius: var(--card-radius);
+      overflow: hidden; /* important: ensures image corners match card */
+      box-shadow: 0 4px 12px rgba(0,0,0,0.08);
+      background: #fff;
+      transition: transform 0.18s ease, box-shadow 0.18s ease;
+      margin: 0 auto;
+      display: flex;
+      flex-direction: row;
+      gap: 0;               /* left and right touch — image fills entirely left column */
+      align-items: stretch; /* makes left column stretch to full card height */
+      border: 1px solid rgba(0,0,0,0.06);
+    }
 
-/* Project cards */
-.project-card {
-  display: flex;
-  flex-direction: row;
-  gap: 20px;
-  width: 90%;               /* responsive card width */
-  max-width: 900px;         /* constrain card size */
-  padding: 25px;
-  border: 1px solid #ccc;
-  border-radius: 12px;
-  background-color: #fff;
-  box-shadow: 0 4px 12px rgba(0,0,0,0.1);
-  text-decoration: none;    /* remove underline from <a> */
-  transition: transform 0.2s ease, box-shadow 0.2s ease;
-  margin: 0 auto;           /* center card */
-  align-items: center;
-}
+    .project-card:hover, .research-item:hover {
+      transform: translateY(-4px);
+      box-shadow: 0 10px 25px rgba(0,0,0,0.12);
+    }
 
-/* Hover effect */
-.project-card:hover {
-  transform: translateY(-3px);
-  box-shadow: 0 8px 20px rgba(0,0,0,0.15);
-}
+    /* Left column (image) */
+    .left-half,
+    .research-left {
+      flex: 0 0 var(--left-col-percent);
+      max-width: var(--left-col-percent);
+      overflow: hidden;
+      display: block; /* block context for img filling */
+    }
 
-/* Left and Right halves */
-.left-half, .right-half {
-  flex: 1;                   /* equal width halves */
-}
+    /* Right column (text) */
+    .right-half,
+    .research-right {
+      flex: 1 1 calc(100% - var(--left-col-percent));
+      padding: 22px 26px; /* padding for text */
+      display: flex;
+      flex-direction: column;
+      justify-content: center;
+      gap: 8px;
+    }
 
-/* Images inside project cards */
-.project-image {
-  width: 100%;
-  max-width: 300px;          /* constrain image size */
-  height: auto;
-  object-fit: cover;
-}
+    /* Force images to fill left column entirely */
+    .left-half img,
+    .research-left img,
+    .project-image {
+      width: 100%;
+      height: 100%;
+      display: block;
+      object-fit: cover; /* crop to fill without distortion */
+    }
 
-/* Project text */
-.right-half h3 {
-  margin-top: 0;
-}
+    /* Make sure images don't inherit other rules */
+    .left-half img, .research-left img {
+      border: 0;
+    }
 
-.right-half p {
-  margin: 6px 0;
-  line-height: 1.5;
-}
-    /* CONTACT SECTION */
-.contact-section {
-  margin-top: 50px;
-  display: flex;
-  flex-direction: column;
-  align-items: center;       /* center content */
-  gap: 1rem;
-  max-width: 600px;
-  margin-left: auto;
-  margin-right: auto;
-  text-align: center;
-  font-size: 1rem;           /* normal size */
-}
+    /* Project/research text styling */
+    .right-half h3, .research-right h3 {
+      margin: 0;
+      font-size: 1.4rem;
+      line-height: 1.15;
+      font-weight: 700;
+    }
 
-.contact-section h2 {
-  font-size: 2rem;
-  font-weight: bold;
-  margin-bottom: 0.5rem;
-}
+    .right-half p, .research-right p {
+      margin: 0;
+      color: #333;
+      line-height: 1.5;
+      font-size: 1rem;
+    }
 
-.contact-section p,
-.contact-description,
-.contact-list,
-.contact-item {
-  font-size: 1rem;
-  font-weight: 400;
-  margin: 0.2rem 0;
-  text-align: center;
-  color: #000;
-}
+    .right-half a, .research-right a {
+      color: #0366d6;
+      text-decoration: none;
+      font-weight: 600;
+    }
 
-.contact-list {
-  display: flex;
-  flex-direction: column;
-  gap: 0.5rem;
-}
+    /* smaller screens: keep horizontal but adjust proportions */
+    @media (max-width: 900px) {
+      :root { --left-col-percent: 45%; } /* slightly larger left col on narrower widths */
+      .project-card, .research-item { max-width: 95%; width: 95%; }
+    }
 
-.contact-item {
-  display: flex;
-  align-items: center;
-  justify-content: center;
-  gap: 0.5rem;
-}
+    /* at very small widths, keep horizontal but allow scrolling if needed */
+    @media (max-width: 520px) {
+      /* user previously insisted always horizontal; we keep horizontal but make left column smaller to preserve space */
+      :root { --left-col-percent: 40%; }
+      .right-half, .research-right { padding: 12px; }
+      .projects-section h2, .research-section h2 { font-size: 1.8rem; }
+    }
 
-.contact-icon {
-  width: 20px;
-  height: 20px;
-}
+    /* Contact block styles (kept as you had) */
+    .compact-contact {
+      display:flex;
+      flex-direction:column;
+      align-items:center;
+      gap:1rem;
+      max-width:500px;
+      margin:50px auto 0 auto;
+      text-align:center;
+      font-size:1rem;
+      line-height:1.5;
+    }
+    .compact-contact h2 { font-size:2rem; font-weight:700; margin-bottom:0.5rem; }
+    .compact-contact p { margin:0.2rem 0; color:#222; }
+    .compact-contact img { width:24px; height:24px; object-fit:contain; }
+    .compact-contact a { text-decoration:none; color:#000; font-weight:600; }
 
-/* FOOTER */
-.site-footer {
-  text-align: center;
-  padding: 2rem 1rem 1rem;
-  color: #333;
-  background-color: transparent;
-}
-
-.site-footer h3 {
-  font-size: 1.2rem;
-  font-weight: 700;
-  margin-bottom: 0.5rem;
-}
-
-.footer-contact-links {
-  display: flex;
-  justify-content: center;
-  gap: 1.5rem;
-  flex-wrap: wrap;
-  align-items: center;
-  margin-bottom: 1rem;
-}
-
-.footer-contact-links a {
-  display: flex;
-  align-items: center;
-  text-decoration: none;
-  color: #333;
-  font-weight: 600;
-  font-size: 1rem;
-}
-
-.footer-contact-links img {
-  width: 20px;
-  height: 20px;
-  margin-right: 8px;
-  object-fit: contain;
-}
-
-.footer-copyright {
-  font-size: 0.9rem;
-  font-weight: 500;
-  color: #666;
-  margin-top: 0;
-}
-
-</style>
+  </style>
 </head>
 <body>
   <div class="page-wrapper">
@@ -246,108 +196,104 @@ main {
 
     <main>
       <section class="projects-section">
-  <h2>Latest Projects</h2>
+        <h2>Latest Projects</h2>
 
-  <div class="project-card-wrapper">
-    <a href="https://github.com/jackdanielspitzer/WaterPoloStats" class="project-card" target="_blank" rel="noopener noreferrer">
-      <div class="left-half">
-        <img src="thingy.png" alt="Project Screenshot" class="project-image" />
-      </div>
-      <div class="right-half">
-        <h3>Water Polo Stats Application</h3>
-        <p>Water Polo voice enabled statistics tracking application using machine learning and GPT API. Includes 20+ stats, schedules, rosters, and game logs (with timestamps). Framework is applicable to other sports. Contact for inquiries.</p>
-      </div>
-    </a>
-  </div>
+        <div class="project-card-wrapper">
+          <a href="https://github.com/jackdanielspitzer/WaterPoloStats" class="project-card" target="_blank" rel="noopener noreferrer">
+            <div class="left-half">
+              <img src="thingy.png" alt="Project Screenshot" class="project-image" />
+            </div>
+            <div class="right-half">
+              <h3>Water Polo Stats Application</h3>
+              <p>Water Polo voice enabled statistics tracking application using machine learning and GPT API. Includes 20+ stats, schedules, rosters, and game logs (with timestamps). Framework is applicable to other sports. Contact for inquiries.</p>
+            </div>
+          </a>
+        </div>
 
-  <div class="project-card-wrapper">
-    <a href="https://github.com/jackdanielspitzer/ScraperModule" class="project-card" target="_blank" rel="noopener noreferrer">
-      <div class="left-half">
-        <img src="Scrapper.png" alt="LinkedIn Scraper Screenshot" class="project-image" />
-      </div>
-      <div class="right-half">
-        <h3>Scraper Module</h3>
-        <p>Modular Python pipeline to scrape, process, and analyze LinkedIn, Reddit, and X posts and comments. Features custom scoring system, AI summarization (GPT-4o/local), cloud storage, and alert notifications for businesses. Contact White Lotus for use.</p>
-      </div>
-    </a>
-  </div>
-</section>
+        <div class="project-card-wrapper">
+          <a href="https://github.com/jackdanielspitzer/ScraperModule" class="project-card" target="_blank" rel="noopener noreferrer">
+            <div class="left-half">
+              <img src="Scrapper.png" alt="LinkedIn Scraper Screenshot" class="project-image" />
+            </div>
+            <div class="right-half">
+              <h3>Scraper Module</h3>
+              <p>Modular Python pipeline to scrape, process, and analyze LinkedIn, Reddit, and X posts and comments. Features custom scoring system, AI summarization (GPT-4o/local), cloud storage, and alert notifications for businesses. Contact White Lotus for use.</p>
+            </div>
+          </a>
+        </div>
+      </section>
 
+      <section class="research-section">
+        <h2>Research</h2>
 
-    <section class="research-section">
-  <h2>Research</h2>
+        <!-- Curieux Academic Journal -->
+        <div class="research-item">
+          <div class="research-left">
+            <img src="Abstract.png" alt="Curieux Academic Journal" class="project-image" />
+          </div>
+          <div class="research-right">
+            <h3>Curieux Academic Journal – November 2025, Issue 56, Part 2</h3>
+            <p><strong>Paper Title:</strong> <em>Unlocking Transparency: The Role of Non “Black Box” Machine Learning Models in Medicine</em></p>
+            <p><strong>Author:</strong> Jack Spitzer (2025)</p>
+            <p><strong>Link:</strong> <a href="https://www.curieuxacademicjournal.com/_files/ugd/99711c_00f1cef862a8433e9766f5b902b06f85.pdf#page=661" target="_blank" rel="noopener noreferrer">Read the paper here</a></p>
+            <p><strong>Summary:</strong> Discusses the importance of interpretability in AI-driven diagnostics and treatment recommendations, advocating for transparency in medical ML models.</p>
+          </div>
+        </div>
 
-  <!-- Curieux Academic Journal -->
-  <div class="research-item">
-    <div class="research-left">
-      <img src="Abstract.png" alt="Curieux Academic Journal" class="project-image" />
-    </div>
-    <div class="research-right">
-      <h3>Curieux Academic Journal – November 2025, Issue 56, Part 2</h3>
-      <p><strong>Paper Title:</strong> <em>Unlocking Transparency: The Role of Non “Black Box” Machine Learning Models in Medicine</em></p>
-      <p><strong>Author:</strong> Jack Spitzer (2025)</p>
-      <p><strong>Link:</strong> <a href="https://www.curieuxacademicjournal.com/_files/ugd/99711c_00f1cef862a8433e9766f5b902b06f85.pdf#page=661" target="_blank" rel="noopener noreferrer">Read the paper here</a></p>
-      <p><strong>Summary:</strong> Discusses the importance of interpretability in AI-driven diagnostics and treatment recommendations, advocating for transparency in medical ML models.</p>
-    </div>
-  </div>
+        <!-- ACS Western Regional Meeting -->
+        <div class="research-item">
+          <div class="research-left">
+            <img src="ACS.jpg" alt="ACS Western Regional Meeting" class="project-image" />
+          </div>
+          <div class="research-right">
+            <h3>American Chemical Society Western Regional Meeting – October 25–28, 2025</h3>
+            <p><strong>Presentation Title:</strong> <em>Exploring Acetaldehyde Photodissociation Pathways using Interpretable AI Models</em></p>
+            <p><strong>Authors:</strong> Kim, J.H., Dang, H., Joshi, H., Vyas, D.H., Wong, A., Sridharan, S., Spitzer, J.D., Andreasyan, D., Bojeh, E., Grazioli, G.</p>
+            <p><strong>Event:</strong> Poster Presentation at the ACS Western Regional Meeting</p>
+            <p><strong>Location:</strong> Signia by Hilton, San Jose, CA</p>
+            <p><strong>Link:</strong> <a href="https://wrm2025.org/" target="_blank" rel="noopener noreferrer">Event Details</a></p>
+            <p><strong>Summary:</strong> Explores the photodissociation pathways of acetaldehyde using interpretable AI models, presented at the ACS Western Regional Meeting.</p>
+          </div>
+        </div>
 
-  <!-- ACS Western Regional Meeting -->
-  <div class="research-item">
-    <div class="research-left">
-      <img src="ACS.jpg" alt="ACS Western Regional Meeting" class="project-image" />
-    </div>
-    <div class="research-right">
-      <h3>American Chemical Society Western Regional Meeting – October 25–28, 2025</h3>
-      <p><strong>Presentation Title:</strong> <em>Exploring Acetaldehyde Photodissociation Pathways using Interpretable AI Models</em></p>
-      <p><strong>Authors:</strong> Kim, J.H., Dang, H., Joshi, H., Vyas, D.H., Wong, A., Sridharan, S., Spitzer, J.D., Andreasyan, D., Bojeh, E., Grazioli, G.</p>
-      <p><strong>Event:</strong> Poster Presentation at the ACS Western Regional Meeting</p>
-      <p><strong>Location:</strong> Signia by Hilton, San Jose, CA</p>
-      <p><strong>Link:</strong> <a href="https://wrm2025.org/" target="_blank" rel="noopener noreferrer">Event Details</a></p>
-      <p><strong>Summary:</strong> Explores the photodissociation pathways of acetaldehyde using interpretable AI models, presented at the ACS Western Regional Meeting.</p>
-    </div>
-  </div>
-
-  <!-- Manuscript in Progress -->
-  <div class="research-item">
-    <div class="research-left">
-      <img src="ACS.jpg" alt="Manuscript in Progress" class="project-image" />
-    </div>
-    <div class="research-right">
-      <h3>Manuscript in Progress – Exploring Acetaldehyde Photodissociation</h3>
-      <p><strong>Authors:</strong> Kim, J.H., Dang, H., Joshi, H., Vyas, D.H., Wong, A., Sridharan, S., Spitzer, J.D., Andreasyan, D., Bojeh, E., Grazioli, G.</p>
-      <p><strong>Status:</strong> Manuscript in Progress</p>
-      <p><strong>Summary:</strong> Builds on the ACS poster research, using interpretable AI models to analyze acetaldehyde photodissociation pathways. The manuscript is being prepared for submission to a peer-reviewed journal.</p>
-    </div>
-  </div>
-</section>
-
-
+        <!-- Manuscript in Progress -->
+        <div class="research-item">
+          <div class="research-left">
+            <img src="ACS.jpg" alt="Manuscript in Progress" class="project-image" />
+          </div>
+          <div class="research-right">
+            <h3>Manuscript in Progress – Exploring Acetaldehyde Photodissociation</h3>
+            <p><strong>Authors:</strong> Kim, J.H., Dang, H., Joshi, H., Vyas, D.H., Wong, A., Sridharan, S., Spitzer, J.D., Andreasyan, D., Bojeh, E., Grazioli, G.</p>
+            <p><strong>Status:</strong> Manuscript in Progress</p>
+            <p><strong>Summary:</strong> Builds on the ACS poster research, using interpretable AI models to analyze acetaldehyde photodissociation pathways. The manuscript is being prepared for submission to a peer-reviewed journal.</p>
+          </div>
+        </div>
+      </section>
     </main>
 
-<section style="display:flex; flex-direction:column; align-items:center; gap:1rem; max-width:500px; margin:50px auto 0 auto; text-align:center; font-size:1rem; line-height:1.5;">
-  <h2 style="font-size:2rem; font-weight:bold; margin-bottom:0.5rem;">Contact Info</h2>
-  <p style="margin:0.2rem 0;">
-    If you want to get in touch with me about something or just to say hi, reach out on social media or send me an email. I'm always open to meeting new people and interesting conversations.
-  </p>
+    <!-- compact centered contact block -->
+    <section class="compact-contact">
+      <h2>Contact Info</h2>
+      <p>If you want to get in touch with me about something or just to say hi, reach out on social media or send me an email. I'm always open to meeting new people and interesting conversations.</p>
 
-  <div style="display:flex; flex-direction:column; gap:0.5rem; align-items:center; margin-top:1rem;">
-    <div style="display:flex; align-items:center; gap:0.5rem;">
-      <img src="x-image.png" alt="X logo" style="width:20px;height:20px;object-fit:contain;">
-      <a href="https://x.com/JackDSpitzer" target="_blank" style="text-decoration:none;color:#000;font-weight:600;">@JackDSpitzer</a>
-    </div>
-    <div style="display:flex; align-items:center; gap:0.5rem;">
-      <img src="github-black.png" alt="GitHub logo" style="width:20px;height:20px;object-fit:contain;">
-      <a href="https://github.com/jackdanielspitzer" target="_blank" style="text-decoration:none;color:#000;font-weight:600;">jackdanielspitzer</a>
-    </div>
-    <div style="display:flex; align-items:center; gap:0.5rem;">
-      <img src="email.png" alt="Email icon" style="width:20px;height:20px;object-fit:contain;">
-      <a href="mailto:jackdanielspitzer@gmail.com" style="text-decoration:none;color:#000;font-weight:600;">jackdanielspitzer@gmail.com</a>
-    </div>
+      <div style="display:flex; flex-direction:column; gap:0.6rem; align-items:center; margin-top:0.4rem;">
+        <div style="display:flex; align-items:center; gap:0.6rem;">
+          <img src="x-image.png" alt="X logo" />
+          <a href="https://x.com/JackDSpitzer" target="_blank">@JackDSpitzer</a>
+        </div>
+        <div style="display:flex; align-items:center; gap:0.6rem;">
+          <img src="github-black.png" alt="GitHub logo" />
+          <a href="https://github.com/jackdanielspitzer" target="_blank">jackdanielspitzer</a>
+        </div>
+        <div style="display:flex; align-items:center; gap:0.6rem;">
+          <img src="email.png" alt="Email icon" />
+          <a href="mailto:jackdanielspitzer@gmail.com">jackdanielspitzer@gmail.com</a>
+        </div>
+      </div>
+
+      <p style="margin-top:0.8rem; font-size:0.9rem; color:#666;">©2025 Jack Spitzer</p>
+    </section>
+
   </div>
-
-  <p style="margin-top:1rem; font-size:0.9rem; color:#666;">©2025 Jack Spitzer</p>
-</section>
-
-
 </body>
-</html> 
+</html>
