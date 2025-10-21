@@ -518,6 +518,7 @@ main {
   justify-content: center;  /* center tweet embed */
   width: 100%;
 }
+/* CONTACT SECTION */
 .contact-section {
   margin-top: 50px;
   display: flex;
@@ -528,6 +529,7 @@ main {
   margin-left: auto;
   margin-right: auto;
   text-align: center;
+  font-size: 1rem;           /* normal size */
 }
 
 .contact-section h2 {
@@ -542,8 +544,9 @@ main {
 .contact-item {
   font-size: 1rem;
   font-weight: 400;
-  color: #000;
+  margin: 0.2rem 0;
   text-align: center;
+  color: #000;
 }
 
 .contact-list {
@@ -552,16 +555,22 @@ main {
   gap: 0.5rem;
 }
 
+.contact-item {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  gap: 0.5rem;
+}
+
 .contact-icon {
   width: 20px;
   height: 20px;
 }
 
-
-
+/* FOOTER */
 .site-footer {
   text-align: center;
-  padding: 2rem 1rem 1rem;  /* a bit less bottom padding */
+  padding: 2rem 1rem 1rem;
   color: #333;
   background-color: transparent;
 }
@@ -572,20 +581,13 @@ main {
   margin-bottom: 0.5rem;
 }
 
-.site-footer p {
-  font-weight: 600;
-  font-size: 1rem;
-  max-width: 600px;
-  margin: 0 auto 1rem auto;
-}
-
 .footer-contact-links {
   display: flex;
   justify-content: center;
-  gap: 2rem;
+  gap: 1.5rem;
   flex-wrap: wrap;
   align-items: center;
-  margin-bottom: 1rem; /* space before copyright */
+  margin-bottom: 1rem;
 }
 
 .footer-contact-links a {
@@ -610,6 +612,7 @@ main {
   color: #666;
   margin-top: 0;
 }
+
 
 /* Make layout responsive on mobile devices */
 @media (max-width: 768px) {
