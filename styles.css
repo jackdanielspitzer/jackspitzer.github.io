@@ -48,7 +48,7 @@ nav a:hover {
 .profile-photo img {
   width: 100%;
   height: 100%;
-  object-fit: cover;
+  object-fit: contain;
   display: block;
 }
 
@@ -65,8 +65,8 @@ nav a:hover {
 /* Make intro keep its width */
 .profile-photo {
   flex-shrink: 0;     /* Prevent shrinking */
-  width: 180px;       /* Fixed width */
-  height: 180px;      /* Fixed height */
+  width: 250px;       /* Fixed width */
+  height: 250px;      /* Fixed height */
   border-radius: 50%;
   overflow: hidden;
   margin-top: 0px;
