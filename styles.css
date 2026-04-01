@@ -65,7 +65,7 @@ nav a:hover {
 /* Make intro keep its width */
 .profile-photo {
   flex-shrink: 0;     /* Prevent shrinking */
-  width: 150px;       /* Fixed width */
+  width: 20px;       /* Fixed width */
   height: 500px;      /* Fixed height */
   border-radius: 50%;
   overflow: hidden;
