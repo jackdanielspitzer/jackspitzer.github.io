@@ -17,7 +17,7 @@
 <body>
   <header class="nav">
     <div class="nav-inner">
-      <a href="#top" class="brand">Jack Spitzer</a>
+      <a href="#top" class="brand"><span class="mono">JS</span><span class="brand-name">Jack Spitzer</span></a>
       <nav>
         <a href="#about">About</a>
         <a href="#poloiq">PoloIQ™</a>
@@ -260,5 +260,17 @@
   <footer class="wrap">© <span id="yr">2026</span> Jack Spitzer</footer>
   <script async src="https://platform.twitter.com/widgets.js" charset="utf-8"></script>
   <script>document.getElementById('yr').textContent = new Date().getFullYear();</script>
+  <script>
+    (function(){
+      var links=[].slice.call(document.querySelectorAll('.nav nav a'));
+      var map={};links.forEach(function(a){map[a.getAttribute('href').slice(1)]=a});
+      var header=document.querySelector('.nav');
+      function onScroll(){header.classList.toggle('scrolled',window.scrollY>20);
+        var cur=null;Object.keys(map).forEach(function(id){var el=document.getElementById(id);if(el&&el.getBoundingClientRect().top<140)cur=id});
+        links.forEach(function(a){a.classList.toggle('active',map[cur]===a)});
+        if(cur&&map[cur].scrollIntoView&&window.innerWidth<820){var n=map[cur].parentNode;n.scrollLeft=map[cur].offsetLeft-n.clientWidth/2+map[cur].clientWidth/2}}
+      window.addEventListener('scroll',onScroll,{passive:true});onScroll();
+    })();
+  </script>
 </body>
 </html>
