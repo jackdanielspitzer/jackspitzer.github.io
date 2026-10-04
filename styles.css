@@ -171,3 +171,7 @@ footer{padding-top:32px;padding-bottom:40px;color:var(--muted);font-size:.85rem;
 /* interests in hero */
 .hero-interests{grid-column:1/-1;background:var(--surface);border:1px solid var(--line);border-radius:var(--radius);padding:24px 26px}
 .hero-interests > p.tag{margin-bottom:6px}
+
+/* multi-paragraph intro */
+.hero-text .lede{font-size:1.06rem;margin:0 0 14px}
+.hero-text .cta{margin-top:24px}
