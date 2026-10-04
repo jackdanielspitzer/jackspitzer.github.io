@@ -24,7 +24,6 @@
         <a href="#projects">Projects</a>
         <a href="#research">Research</a>
         <a href="#updates">Updates</a>
-        <a href="resume.html">Resume</a>
         <a href="#contact">Contact</a>
       </nav>
     </div>
@@ -39,7 +38,7 @@
         <p class="lede">I'm a student in the College of Chemistry at UC Berkeley and a researcher in the Grazioli Research Group at San José State, where I apply machine learning to chaotic molecular dynamics. I'm also the founder of PoloIQ™, a patent-pending sports analytics company, and I build software like ReactorMind, an AI study tool for chemical engineering.</p>
         <div class="cta">
           <a class="btn primary" href="#projects">See my work</a>
-          <a class="btn" href="resume.html">Resume</a>
+          <a class="btn" href="#about">About me</a>
         </div>
         <div class="socials">
           <a href="https://github.com/jackdanielspitzer" aria-label="GitHub"><svg viewBox="0 0 24 24"><path d="M12 .5a12 12 0 0 0-3.8 23.4c.6.1.8-.3.8-.6v-2c-3.3.7-4-1.6-4-1.6-.6-1.4-1.4-1.8-1.4-1.8-1-.7.1-.7.1-.7 1.2.1 1.8 1.2 1.8 1.2 1 1.8 2.8 1.3 3.5 1 .1-.8.4-1.3.7-1.6-2.7-.3-5.5-1.3-5.5-6 0-1.2.5-2.3 1.2-3.1-.1-.4-.5-1.6.1-3.2 0 0 1-.3 3.3 1.2a11.5 11.5 0 0 1 6 0C17.3 4.7 18.3 5 18.3 5c.6 1.6.2 2.8.1 3.2.8.8 1.2 1.9 1.2 3.1 0 4.7-2.8 5.7-5.5 6 .4.4.8 1.1.8 2.2v3.3c0 .3.2.7.8.6A12 12 0 0 0 12 .5z"/></svg></a>
@@ -55,20 +54,35 @@
     <!-- ABOUT -->
     <section id="about" class="wrap section">
       <h2>About</h2>
-      <div class="about-grid">
-        <div class="about-text">
-          <p>I'm a student in the <strong>College of Chemistry at UC Berkeley</strong> (class of 2030). Since 2024 I've been a researcher in the <strong>Grazioli Research Group</strong> at San José State University, mentored by Dr. Gianmarc Grazioli. We develop computational methods that combine molecular simulation and machine learning to study chemical reaction dynamics, configurational dynamics in biomolecules, and molecular self-assembly. My current focus is self-improving AI that learns chaotic dynamics through continual learning.</p>
-          <p>Outside the lab, I build products. I co-founded <strong>Water Polo Stats</strong>, a voice-enabled stat tracker used by 30+ high schools and clubs across California. I then founded <strong>PoloIQ™</strong>, a sports analytics company built on that foundation for collegiate programs. Its core technology is patent pending. I'm also building <strong>ReactorMind</strong>, and from 2025 to 2026 I built AI/ML tools for 20+ clients at the startup <strong>White Lotus</strong>.</p>
-          <p>Water polo has been part of my life for a long time. I played varsity All-League, made the ODP Pacific Zone team, and founded a Splash Ball program that introduced 60+ kids to the sport. I also like hardware and have built drones from scratch.</p>
+      <div class="about-cols">
+        <div class="about-block">
+          <p class="tag">What I'm doing now</p>
+          <p>I'm a student in the <strong>College of Chemistry at UC Berkeley</strong>. I'm also a researcher in the <strong>Grazioli Research Group</strong> at San José State, where I've worked since 2024 with Dr. Gianmarc Grazioli. We're building self-improving AI that learns chaotic dynamics through continual learning on trajectories through phase space, and we test it on everything from double pendulums to molecules breaking apart after they absorb light.</p>
+          <p>Outside of class and the lab, I'm building <strong>PoloIQ™</strong> into a company. It's analytics and coaching software for collegiate water polo, and its core technology is patent pending. I'm also building <strong>ReactorMind</strong>, an AI study tool for chemical engineering. At Berkeley I'm involved with AIChE, ACS, the ChemE Car team, and the Biofuels Technology Club research team.</p>
         </div>
-        <ul class="facts">
-          <li><span>Education</span>UC Berkeley · College of Chemistry, 2030</li>
-          <li><span>Research</span>Grazioli Group, San José State (2024–)</li>
-          <li><span>Founder</span>PoloIQ™</li>
-          <li><span>Co-founder</span>Water Polo Stats</li>
-          <li><span>Patent</span>U.S. App. No. 64/169,223 (pending)</li>
-          <li><span>Tools</span>Python · Java · ML / SciML · Simulation · Bash · Git · Linux</li>
-        </ul>
+        <div class="about-block">
+          <p class="tag">What I've done</p>
+          <ul class="done">
+            <li>Co-founded <strong>Water Polo Stats</strong>, a voice-enabled stat tracker now used by 30+ high schools and clubs across California</li>
+            <li>Presented research at the <strong>ACS Western Regional Meeting</strong> (2025) and <strong>NCUR</strong> (2026), and published on interpretable ML in medicine in the <em>Curieux Academic Journal</em></li>
+            <li>Built AI/ML tools for 20+ client companies as a developer and consultant at the startup <strong>White Lotus</strong></li>
+            <li>Founded a Splash Ball program that taught water polo to 60+ kids, and played varsity water polo at the All-League level</li>
+            <li>Designed and built drones from scratch, and became an Eagle Scout</li>
+          </ul>
+        </div>
+        <div class="about-block wide">
+          <p class="tag">What I'm interested in, and why</p>
+          <div class="why">
+            <div>
+              <h3>Machine learning for chaotic systems</h3>
+              <p>Chaotic systems are where traditional simulation struggles most: tiny differences grow fast, and accurate simulations are expensive. I find it exciting to build models that keep learning and get better the more they see, and that can show <em>why</em> they predict what they do. That's the same idea behind PoloIQ™'s explainable recommendations.</p>
+            </div>
+            <div>
+              <h3>Synthetic biology &amp; metabolic engineering</h3>
+              <p>I'm drawn to the idea of programming living cells to make the chemicals and fuels we usually get from petroleum. I'm reading about engineering <em>Pseudomonas putida</em>, modular polyketide synthases (PKSs) that build complex molecules step by step, and the genetic logic (inducible and AND-gated promoters) that switches those pathways on. It's where my chemistry, data, and engineering interests overlap.</p>
+            </div>
+          </div>
+        </div>
       </div>
     </section>
 
@@ -196,23 +210,6 @@
       </div>
     </section>
 
-    <!-- INTERESTS -->
-    <section id="interests" class="wrap section">
-      <h2>What I'm exploring</h2>
-      <div class="interests">
-        <article class="interest">
-          <p class="tag">Current research</p>
-          <h3>ML for chaotic molecular dynamics</h3>
-          <p>Self-improving models that learn from trajectories through phase space, from double pendulums to bond breaking in photoexcited molecules.</p>
-        </article>
-        <article class="interest">
-          <p class="tag">Growing interest</p>
-          <h3>Synthetic biology &amp; metabolic engineering</h3>
-          <p>Engineering bacteria like <em>Pseudomonas putida</em> into chemical factories. I'm interested in modular polyketide synthases (PKSs) for making biofuels and industrial chemicals, and in the genetic logic that controls them, such as inducible and AND-gated promoters.</p>
-        </article>
-      </div>
-    </section>
-
     <!-- UPDATES -->
     <section id="updates" class="wrap section">
       <h2>Updates</h2>
@@ -222,7 +219,7 @@
         <li><time>Fall 2026</time><p>PoloIQ™ now covers 2026 results, rosters, and box scores for 17 college programs, with daily automated updates and a scoreboard clock reader.</p></li>
         <li><time>Aug 2026</time><p>Founded PoloIQ™ to take Water Polo Stats to the collegiate level.</p></li>
         <li><time>Aug 2026</time><p>Started rebuilding hundreds of LearnChemE simulations natively in ReactorMind, each with an AI explainer.</p></li>
-        <li><time>2026</time><p>Presented at NCUR 2026 on ML for chaotic dynamics. Named AP Scholar with Distinction and graduated from Palo Alto High School.</p></li>
+        <li><time>2026</time><p>Presented at NCUR 2026 on ML for chaotic dynamics.</p></li>
         <li><time>Nov 2025</time><p>Published in the Curieux Academic Journal (Issue 56, Part 2).</p></li>
         <li><time>Oct 2025</time><p>Presented a poster on acetaldehyde photodissociation at the ACS Western Regional Meeting in San Jose.</p></li>
         <li><time>Jul 2025</time><p>Ran acetaldehyde and HCl dynamics with TURBOMOLE + FROG for our continual-learning model.</p></li>
