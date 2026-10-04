@@ -220,20 +220,3 @@ footer{border-top-color:rgba(255,255,255,.6);color:var(--navy)}
 .feature-card p{margin:0;color:var(--muted);font-size:.93rem}
 .feature-card strong{color:var(--navy)}
 .fine.center{text-align:center;color:var(--navy);opacity:.75;font-size:.8rem;margin-top:18px}
-
-/* ===== majestic headings ===== */
-h1,h2{font-family:Fraunces,Georgia,serif;font-optical-sizing:auto}
-h1{font-weight:800;letter-spacing:-.02em;font-size:clamp(2.8rem,6.5vw,4.6rem);
-  background:linear-gradient(100deg,var(--navy) 0%,#0a2a6b 55%,var(--blue) 100%);-webkit-background-clip:text;background-clip:text;color:transparent;
-  filter:drop-shadow(0 2px 18px rgba(255,255,255,.55))}
-.section > h2{position:relative;display:block;text-align:center;margin:0 auto 44px;padding-bottom:30px;
-  font-size:clamp(2.6rem,6vw,4rem);font-weight:800;letter-spacing:-.01em;line-height:1.05;
-  color:var(--navy);-webkit-text-fill-color:var(--navy);background:none;filter:none;
-  text-shadow:0 1px 0 rgba(255,255,255,.7),0 0 30px rgba(255,255,255,.75),0 0 60px rgba(182,255,46,.45)}
-.section > h2::before{content:none}
-.section > h2::after{content:"\25C6";position:absolute;left:50%;bottom:0;transform:translateX(-50%);
-  width:220px;height:16px;line-height:16px;font-size:15px;color:var(--lime);border-radius:0;
-  -webkit-text-fill-color:var(--lime);text-shadow:0 0 0 var(--navy),0 0 10px rgba(182,255,46,.9);
-  -webkit-text-stroke:1.5px var(--navy);
-  background:linear-gradient(90deg,transparent,var(--navy) 35%,transparent 44%,transparent 56%,var(--navy) 65%,transparent) center/100% 2px no-repeat;
-  box-shadow:none}
