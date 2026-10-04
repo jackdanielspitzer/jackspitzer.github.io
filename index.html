@@ -1,179 +1,216 @@
 <!DOCTYPE html>
 <html lang="en">
 <head>
-  <meta charset="UTF-8" />
-  <meta name="description" content="Jack Spitzer is a student, researcher, and developer in machine learning, computational chemistry, and engineering. Explore his projects, research, and ideas.">
-<meta name="keywords" content="Jack Spitzer, machine learning, water polo stats, researcher, developer, student, engineering, computational chemistry">
-<meta name="author" content="Jack Spitzer">
-
-  <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
-  <script type="application/ld+json">
-{
-  "@context": "https://schema.org",
-  "@type": "Person",
-  "name": "Jack Spitzer",
-  "url": "https://jackspitzer.xyz",
-  "sameAs": [
-    "https://github.com/jackdanielspitzer",
-    "https://twitter.com/JackDSpitzer"
-  ],
-  "jobTitle": "Student, Researcher, and Developer",
-  "description": "Official website of Jack Spitzer, focused on machine learning, computational chemistry, and engineering projects."
-}
-</script>
-
- <title>Jack Spitzer </title>
-  <link rel="icon" href="thingy2.png" type="image/png" />
-  <!-- other head tags -->
-<link rel="stylesheet" href="styles.css" />
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <title>Jack Spitzer</title>
+  <meta name="description" content="Jack Spitzer — student, researcher, and builder working across machine learning, computational chemistry, and software.">
+  <meta property="og:title" content="Jack Spitzer">
+  <meta property="og:description" content="Machine learning, computational chemistry, and things I build.">
+  <meta property="og:image" content="https://jackspitzer.xyz/profile-web.jpg">
+  <link rel="icon" href="thingy2.png">
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700;800&family=JetBrains+Mono:wght@500&display=swap" rel="stylesheet">
+  <link rel="stylesheet" href="styles.css">
+</head>
 <body>
-  <nav>
-    <a href="index.html">Home</a>
-    <a href="projects.html">Projects/Research</a>
-    <a href="updates.html">Updates</a>
-    <a href="contact.html">Contact</a>
-  </nav>
-
-  <main>
-  <div class="content-wrapper">
-    <div class="profile-photo">
-      <img src="Profile.jpg" alt="Profile Photo" />
+  <header class="nav">
+    <div class="nav-inner">
+      <a href="#top" class="brand">Jack Spitzer</a>
+      <nav>
+        <a href="#about">About</a>
+        <a href="#projects">Projects</a>
+        <a href="#research">Research</a>
+        <a href="#updates">Updates</a>
+        <a href="resume.html">Resume</a>
+        <a href="#contact">Contact</a>
+      </nav>
     </div>
+  </header>
 
-    <section class="intro">
-      <!-- your intro content here -->
-      <h1>Hey there 👋</h1>
-      <p>I'm Jack! I'm a student, builder, entrepreneur, and explorer working at the intersection of machine learning, computational chemistry and biophysics, and hands-on engineering.</p>
-
-      <p>I'm currently part of the Grazioli Research Group, where I work on simulations, including machine learning simulations for computational chemistry and biophysics. We work to increase scientific understanding through intelligent, data-driven models that can help us in developing a greater molecular understanding and predict reaction products.</p>
-      
-      <p>Beyond the group, I have also enjoyed working for White Lotus (startup) to consult and develop AI/ML tools to streamline business workflows whether for advertising, finance, or increasing efficency.</p> 
-
-      <p>I also enjoy building things! I've designed and built drones from scratch, applying engineering principles across thermodynamics, hardware, and software. I am also a co-founder and developer for Water Polo Statistics where we have developed a voice enabled statistics tracking application to make statistics tracking easier and more automatic for those who enjoy the sport. I enjoy creating apps and experimenting with new technology, whether it's a tool to make life easier or a system to explore an interesting idea.</p>
-
-      <p>This website exists for three main reasons:</p>
-      <ul>
-        <li>1️⃣ To share my projects and research. Whether it's research from the group, a custom-built drone, or a new app I'm excited about, I want to showcase what I'm building and learning.</li>
-        <li>2️⃣ To explore and organize my ideas. As I continue to work across machine learning, chemistry, physics, and engineering, this site will act as a central place to track the evolution of my interests and insights.</li>
-        <li>3️⃣ To connect with others. I'm always open to new conversations, collaborations, or feedback. Whether you're working in a similar field or just curious, feel free to reach out.</li>
-      </ul>
-      <button class="connect-btn" onclick="window.open('https://twitter.com/JackDSpitzer', '_blank')">
-    Let's Connect!
-  </button>
-
+  <main id="top">
+    <!-- HERO -->
+    <section class="hero wrap">
+      <div class="hero-text">
+        <p class="eyebrow">ChemE @ UC Berkeley · ML Research · Founder</p>
+        <h1>Hi, I'm Jack.</h1>
+        <p class="lede">I'm a Chemical Engineering student at UC Berkeley and a researcher in the Grazioli Research Group at San José State, where I apply machine learning to chaotic molecular dynamics. I also build software people use: PoloIQ, a patent-pending water polo analytics platform, and ReactorMind, an AI study tool for chemical engineers.</p>
+        <div class="cta">
+          <a class="btn primary" href="#projects">See my work</a>
+          <a class="btn" href="resume.html">Resume</a>
+        </div>
+        <div class="socials">
+          <a href="https://github.com/jackdanielspitzer" aria-label="GitHub"><svg viewBox="0 0 24 24"><path d="M12 .5a12 12 0 0 0-3.8 23.4c.6.1.8-.3.8-.6v-2c-3.3.7-4-1.6-4-1.6-.6-1.4-1.4-1.8-1.4-1.8-1-.7.1-.7.1-.7 1.2.1 1.8 1.2 1.8 1.2 1 1.8 2.8 1.3 3.5 1 .1-.8.4-1.3.7-1.6-2.7-.3-5.5-1.3-5.5-6 0-1.2.5-2.3 1.2-3.1-.1-.4-.5-1.6.1-3.2 0 0 1-.3 3.3 1.2a11.5 11.5 0 0 1 6 0C17.3 4.7 18.3 5 18.3 5c.6 1.6.2 2.8.1 3.2.8.8 1.2 1.9 1.2 3.1 0 4.7-2.8 5.7-5.5 6 .4.4.8 1.1.8 2.2v3.3c0 .3.2.7.8.6A12 12 0 0 0 12 .5z"/></svg></a>
+          <a href="https://x.com/JackDSpitzer" aria-label="X"><svg viewBox="0 0 24 24"><path d="M18.2 2.3h3.4l-7.4 8.4 8.7 11.5h-6.8l-5.3-7-6.1 7H1.3l7.9-9L.9 2.3h7l4.8 6.4 5.5-6.4zm-1.2 17.9h1.9L7.1 4.2H5.1L17 20.2z"/></svg></a>
+          <a href="mailto:jackdanielspitzer@gmail.com" aria-label="Email"><svg viewBox="0 0 24 24"><path d="M2 5h20v14H2V5zm2 2v.5l8 5 8-5V7H4zm16 2.8-8 5-8-5V17h16V9.8z"/></svg></a>
+        </div>
+      </div>
+      <div class="hero-photo">
+        <img src="profile-web.jpg" alt="Jack Spitzer">
+      </div>
     </section>
-    
 
-    <div class="side-images">
-      <img src="molecule.png" alt="Molecule" />
-      <img src="drone.png" alt="Drone" />
-      <img src="logo.png" alt="Logo" />
-      <img
-    </div>
-  </div>
-</main>
+    <!-- ABOUT -->
+    <section id="about" class="wrap section">
+      <h2>About</h2>
+      <div class="about-grid">
+        <div class="about-text">
+          <p>I'm studying <strong>Chemical Engineering at UC Berkeley</strong> (College of Chemistry, class of 2030). Since 2024 I've been a researcher in the <strong>Grazioli Research Group</strong> at San José State University, mentored by Dr. Gianmarc Grazioli. We develop computational methods that combine molecular simulation and machine learning to study chemical reaction dynamics, configurational dynamics in biomolecules, and molecular self-assembly. My current focus is self-improving AI that learns chaotic dynamics through continual learning.</p>
+          <p>Outside the lab, I build products. I co-founded <strong>Water Polo Stats</strong>, a voice-enabled stat tracker used by 30+ high schools and clubs across California. I then founded <strong>PoloIQ</strong>, which takes it to the collegiate level, and I have a patent application filed on its core technology. I'm also building <strong>ReactorMind</strong>, and from 2025 to 2026 I built AI/ML tools for 20+ clients at the startup <strong>White Lotus</strong>.</p>
+          <p>Water polo has been part of my life for a long time. I played varsity All-League, made the ODP Pacific Zone team, and founded a Splash Ball program that introduced 60+ kids to the sport. I also like hardware and have built drones from scratch.</p>
+        </div>
+        <ul class="facts">
+          <li><span>Education</span>UC Berkeley · B.S. Chemical Engineering, 2030</li>
+          <li><span>Research</span>Grazioli Group, San José State (2024–)</li>
+          <li><span>Founded</span>PoloIQ · Water Polo Stats</li>
+          <li><span>Patent</span>U.S. App. No. 64/169,223 (pending)</li>
+          <li><span>Tools</span>Python · Java · ML / SciML · Simulation · Bash · Git · Linux</li>
+        </ul>
+      </div>
+    </section>
 
+    <!-- PROJECTS -->
+    <section id="projects" class="wrap section">
+      <h2>Projects</h2>
+      <div class="cards">
+        <article class="card feature">
+          <div class="card-img dark"><img src="poloiq.jpg" alt="PoloIQ logo"></div>
+          <div class="card-body">
+            <p class="tag">Founder &amp; developer · 2026 · Patent pending</p>
+            <h3>PoloIQ</h3>
+            <p>Collegiate water polo analytics. Coaches capture a game by voice, and a camera reads the scoreboard to sync every play to the game clock. An explainable rule engine weighs 36+ factors to recommend lineups and rotations, and shows its reasoning and a confidence level for each one. PoloIQ tracks 2026 results, rosters, and box scores for 17 college programs.</p>
+            <ul class="chips"><li>Voice AI</li><li>Computer vision</li><li>Data pipelines</li><li>PWA</li></ul>
+            <a class="link" href="https://jackdanielspitzer.github.io/PoloIQ/">Open PoloIQ →</a>
+          </div>
+        </article>
 
-<div class="latest-posts">
-  <h2>Latest X Posts</h2>
-  <div class="tweet-wrapper">
-    <blockquote class="twitter-tweet">
-      <p lang="en" dir="ltr">
-        My research paper, “Unlocking Transparency: The Role of Non ‘Black Box’ Machine Learning Models in Medicine,” has been published in the November Issue 56 (Part 2) of Curieux Academic Journal, exploring interpretable AI models like SVMs in medicine. Go check it out!
-        <a href="https://t.co/VPFH1IovMd">pic.twitter.com/VPFH1IovMd</a>
-      </p>
-      &mdash; Jack Spitzer (@JackDSpitzer)
-      <a href="https://twitter.com/JackDSpitzer/status/1980403917122150426?ref_src=twsrc%5Etfw">October 20, 2025</a>
-    </blockquote>
-  </div>
-   <div class="tweet-wrapper">
-    <blockquote class="twitter-tweet">
-      <p lang="en" dir="ltr">
-        I’ll be at the American Chemical Society Western Regional Meeting on 10/26! I’m excited to see all the fascinating research being presented, and I’ll be presenting my research, “Exploring Acetaldehyde Photodissociation Pathways Using Interpretable AI Models.” Come by and say hi!
-        <a href="https://t.co/YDhU9xsCgc">pic.twitter.com/YDhU9xsCgc</a>
-      </p>
-      &mdash; Jack Spitzer (@JackDSpitzer)
-      <a href="https://twitter.com/JackDSpitzer/status/1980399977580118500?ref_src=twsrc%5Etfw">October 20, 2025</a>
-    </blockquote>
-  </div>
-  <div class="tweet-wrapper">
-  <blockquote class="twitter-tweet">
-    <p lang="en" dir="ltr">
-      Created acetaldehyde molecule using TURBOMOLE to build the geometry, then ran a 10-step simulation with FROG, which I visualized in VMD. This molecule will be important for the continual learning model we&#39;re developing with FROG and should help enhance our simulation accuracy.
-      <a href="https://t.co/UctfyliUOM">pic.twitter.com/UctfyliUOM</a>
-    </p>
-    &mdash; Jack Spitzer (@JackDSpitzer)
-    <a href="https://twitter.com/JackDSpitzer/status/1943422454006989283?ref_src=twsrc%5Etfw">July 10, 2025</a>
-  </blockquote>
-</div>
+        <article class="card feature">
+          <div class="card-img"><img src="reactormind.png" alt="ReactorMind logo"></div>
+          <div class="card-body">
+            <p class="tag">Creator</p>
+            <h3>ReactorMind</h3>
+            <p>An AI study platform for chemical engineering. It has hundreds of interactive simulations rebuilt natively with real math, across reactor design, thermodynamics, separations, heat transfer, and more. An AI tutor explains the live numbers on screen, and the platform also generates notes and practice problems.</p>
+            <ul class="chips"><li>React</li><li>FastAPI</li><li>SciPy</li><li>LLMs</li></ul>
+            <a class="link" href="https://reactormind.vercel.app">Open ReactorMind →</a>
+          </div>
+        </article>
 
-  <div class="tweet-wrapper">
-  <blockquote class="twitter-tweet">
-    <p lang="en" dir="ltr">
-      Cool simulation I created and ran recently! Used TURBOMOLE to generate optimized molecular geometries, then used FROG software to prepare a short molecular dynamics simulation (about 10 steps). Finally, visualized the trajectory of the HCl molecule in VMD!
-      <a href="https://t.co/A7WiGXS2ma">pic.twitter.com/A7WiGXS2ma</a>
-    </p>
-    &mdash; Jack Spitzer (@JackDSpitzer)
-    <a href="https://twitter.com/JackDSpitzer/status/1943419438826672513?ref_src=twsrc%5Etfw">July 10, 2025</a>
-  </blockquote>
-</div>
-  <div class="tweet-wrapper">
-    <blockquote class="twitter-tweet">
-      <p lang="en" dir="ltr">
-        Cool simulation that I ran a few days ago: The simulation is 10 steps and represents a ubiquitin solvated in water. Ubiquitin is protein primarily used for ubiquitination: acting as as a molecular tag, marking proteins for degradation by the proteasome - also used for DNA repair.
-        <a href="https://t.co/SF0jkg2689">pic.twitter.com/SF0jkg2689</a>
-      </p>
-      &mdash; Jack Spitzer (@JackDSpitzer) 
-      <a href="https://twitter.com/JackDSpitzer/status/1933370856304263187?ref_src=twsrc%5Etfw">June 13, 2025</a>
-    </blockquote>
-  </div>
-  <script async src="https://platform.twitter.com/widgets.js" charset="utf-8"></script>
-</div>
-<section style="
-  display:flex; 
-  flex-direction:column; 
-  align-items:center; 
-  gap:1rem; 
-  max-width:500px; 
-  margin:50px auto; 
-  text-align:center; 
-  font-size:1rem; 
-  line-height:1.6;
-">
-  <h2 style="font-size:2rem; font-weight:bold; margin-bottom:0.5rem;">Contact Info</h2>
-  
-  <p style="margin:0.2rem 0;">
-    If you want to get in touch with me about something or just to say hi, reach out on social media or send me an email. 
-    I'm always open to meeting new people and interesting conversations.
-  </p>
+        <article class="card">
+          <div class="card-img dark"><img src="logo.png" alt="Water Polo Stats logo"></div>
+          <div class="card-body">
+            <p class="tag">Co-founder &amp; developer · 2024–present</p>
+            <h3>Water Polo Stats</h3>
+            <p>A website and app for voice-enabled stat tracking, with 20+ stats, schedules, rosters, and timestamped game logs. It's used by 30+ high schools and clubs across California and is the foundation PoloIQ is built on.</p>
+            <ul class="chips"><li>Voice AI</li><li>Web + mobile</li></ul>
+          </div>
+        </article>
 
-  <div style="
-    display:flex; 
-    flex-direction:column; 
-    gap:0.7rem; 
-    align-items:center; 
-    margin-top:1rem;
-  ">
-    <div style="display:flex; align-items:center; gap:0.5rem;">
-      <img src="x-image.png" alt="X logo" style="width:24px;height:24px;object-fit:contain;">
-      <a href="https://x.com/JackDSpitzer" target="_blank" style="text-decoration:none;color:#000;font-weight:600;font-size:1rem;">@JackDSpitzer</a>
-    </div>
-    <div style="display:flex; align-items:center; gap:0.5rem;">
-      <img src="github-black.png" alt="GitHub logo" style="width:24px;height:24px;object-fit:contain;">
-      <a href="https://github.com/jackdanielspitzer" target="_blank" style="text-decoration:none;color:#000;font-weight:600;font-size:1rem;">jackdanielspitzer</a>
-    </div>
-    <div style="display:flex; align-items:center; gap:0.5rem;">
-      <img src="email.png" alt="Email icon" style="width:24px;height:24px;object-fit:contain;">
-      <a href="mailto:jackdanielspitzer@gmail.com" style="text-decoration:none;color:#000;font-weight:600;font-size:1rem;">jackdanielspitzer@gmail.com</a>
-    </div>
-  </div>
+        <article class="card">
+          <div class="card-img"><img src="Scrapper.png" alt="Scraper module diagram"></div>
+          <div class="card-body">
+            <p class="tag">White Lotus · 2025–2026</p>
+            <h3>Social Intelligence Scraper</h3>
+            <p>One of the AI/ML tools I built for White Lotus's 20+ clients. It's a modular Python pipeline that scrapes, scores, and summarizes LinkedIn, Reddit, and X posts with GPT-4o or local models and sends alerts.</p>
+            <ul class="chips"><li>Python</li><li>LLMs</li><li>Automation</li></ul>
+          </div>
+        </article>
 
-  <p style="margin-top:1.5rem; font-size:0.9rem; color:#666;">©2025 Jack Spitzer</p>
-</section>
+        <article class="card">
+          <div class="card-img"><img src="drone.png" alt="Custom-built drone"></div>
+          <div class="card-body">
+            <p class="tag">Hardware</p>
+            <h3>Custom Drones</h3>
+            <p>Drones designed and built from scratch, from frame and propulsion to electronics and flight software.</p>
+            <ul class="chips"><li>Hardware</li><li>Embedded</li></ul>
+          </div>
+        </article>
+      </div>
+    </section>
 
+    <!-- RESEARCH -->
+    <section id="research" class="wrap section">
+      <h2>Research &amp; Publications</h2>
+      <div class="pubs">
+        <article class="pub patent">
+          <img src="poloiq.jpg" alt="PoloIQ">
+          <div>
+            <p class="tag">Patent application · USPTO · Filed Oct 4, 2026 · Patent pending</p>
+            <h3>Systems and Methods for Voice-Driven Sports Event Capture, Camera-Based Game-Clock Synchronization, and Explainable, Self-Improving Lineup and Tactics Recommendation</h3>
+            <p class="authors">Inventor: <strong>Jack Spitzer</strong> · U.S. Application No. 64/169,223</p>
+            <p>Covers the core technology behind PoloIQ: capturing game events by voice, syncing them to the game clock with a camera, and recommending lineups and tactics with an explainable engine that improves over time.</p>
+          </div>
+        </article>
+        <article class="pub">
+          <img src="molecule.png" alt="Molecular dynamics">
+          <div>
+            <p class="tag">Manuscript · In preparation for <em>Nature</em></p>
+            <h3>Self-Improving AI for Chaotic Dynamics via Continual Learning on Trajectories through Phase Space</h3>
+            <p class="authors"><strong>Spitzer, J.D.</strong>, Vyas, D.H., Wong, A., Grazioli, G., et al. (authorship order not final)</p>
+            <p>An AI that keeps improving its predictions of chaotic systems by continually learning from new trajectories through phase space.</p>
+          </div>
+        </article>
+        <article class="pub">
+          <img src="pendulum.svg" alt="Double pendulum trajectory">
+          <div>
+            <p class="tag">Presentation · NCUR 2026</p>
+            <h3>From Double Pendulums to Acetaldehyde Photodissociation: Exploring Chaotic Dynamics with Machine Learning</h3>
+            <p class="authors">Vyas, D., Wong, A., <strong>Spitzer, J.</strong>, Dang, H., Huynh, M.H., Grazioli, G.</p>
+            <p>Uses machine learning on chaotic systems, from the classic double pendulum to bond breaking in acetaldehyde.</p>
+          </div>
+        </article>
+        <article class="pub">
+          <img src="ACS.jpg" alt="ACS poster presentation">
+          <div>
+            <p class="tag">Poster · ACS Western Regional Meeting · Oct 2025 · San Jose, CA</p>
+            <h3>Exploring Acetaldehyde Photodissociation Pathways Using Interpretable AI Models</h3>
+            <p class="authors">Kim, J.H., Dang, H., Joshi, H., Vyas, D.H., Wong, A., Sridharan, S., <strong>Spitzer, J.D.</strong>, Andreasyan, D., Bojeh, E., Grazioli, G.</p>
+            <p>Uses interpretable ML on ab initio molecular dynamics trajectories to map how acetaldehyde breaks apart after absorbing light.</p>
+          </div>
+        </article>
+        <article class="pub">
+          <img src="Abstract.png" alt="Paper abstract">
+          <div>
+            <p class="tag">Paper · Curieux Academic Journal · Nov 2025, Issue 56 (Part 2)</p>
+            <h3>Unlocking Transparency: The Role of Non "Black Box" Machine Learning Models in Medicine</h3>
+            <p class="authors"><strong>Spitzer, J.D.</strong></p>
+            <p>Argues that diagnostic and treatment AI should be interpretable, and examines transparent models such as SVMs as alternatives to black-box approaches.</p>
+          </div>
+        </article>
+      </div>
+    </section>
 
+    <!-- UPDATES -->
+    <section id="updates" class="wrap section">
+      <h2>Updates</h2>
+      <ol class="timeline">
+        <li><time>Oct 2026</time><p>Filed a U.S. patent application for PoloIQ's voice capture, camera clock-sync, and explainable tactics technology.</p></li>
+        <li><time>Fall 2026</time><p>Started Chemical Engineering at UC Berkeley. Joined AIChE, ACS, the ChemE Car chassis team, and the Biofuels Technology Club research team.</p></li>
+        <li><time>Fall 2026</time><p>PoloIQ now covers 2026 results, rosters, and box scores for 17 college programs, with daily automated updates and a scoreboard clock reader.</p></li>
+        <li><time>Aug 2026</time><p>Founded PoloIQ to take Water Polo Stats to the collegiate level.</p></li>
+        <li><time>Aug 2026</time><p>Started rebuilding hundreds of LearnChemE simulations natively in ReactorMind, each with an AI explainer.</p></li>
+        <li><time>2026</time><p>Presented at NCUR 2026 on ML for chaotic dynamics. Named AP Scholar with Distinction and graduated from Palo Alto High School.</p></li>
+        <li><time>Nov 2025</time><p>Published in the Curieux Academic Journal (Issue 56, Part 2).</p></li>
+        <li><time>Oct 2025</time><p>Presented a poster on acetaldehyde photodissociation at the ACS Western Regional Meeting in San Jose.</p></li>
+        <li><time>Jul 2025</time><p>Ran acetaldehyde and HCl dynamics with TURBOMOLE + FROG for our continual-learning model.</p></li>
+        <li><time>Jun 2025</time><p>Simulated solvated ubiquitin, a protein that tags other proteins for degradation and helps with DNA repair.</p></li>
+      </ol>
+      <a class="link" href="https://x.com/JackDSpitzer">More on X →</a>
+    </section>
 
+    <!-- CONTACT -->
+    <section id="contact" class="wrap section contact">
+      <h2>Let's connect</h2>
+      <p>I'm always open to conversations, collaborations, and feedback, whether you work in a similar field or you're just curious.</p>
+      <div class="cta">
+        <a class="btn primary" href="mailto:jackdanielspitzer@gmail.com">jackdanielspitzer@gmail.com</a>
+        <a class="btn" href="https://github.com/jackdanielspitzer">GitHub</a>
+        <a class="btn" href="https://x.com/JackDSpitzer">@JackDSpitzer</a>
+      </div>
+    </section>
+  </main>
 
-
+  <footer class="wrap">© <span id="yr">2026</span> Jack Spitzer</footer>
+  <script>document.getElementById('yr').textContent = new Date().getFullYear();</script>
 </body>
 </html>
